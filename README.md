@@ -17,29 +17,35 @@ This is a solution to the [Four card feature section challenge on Frontend Mento
 
 ### The challenge
 
+Users should be able to:
+
+- View the optimal layout for the site depending on their device's screen size
+
 ### Screenshots
 
-<em>Placeholder</em><br>
+![](images/screenshots/screenshot-desktop.jpeg)<br>
 <strong>Desktop</strong>
 
 <br>
 
-<em>Placeholder</em><br>
+![](images/screenshots/screenshot-mobile_1.jpg)
+![](images/screenshots/screenshot-mobile_2.jpg)<br>
 <strong>Mobile</strong>
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [...](...)
 
 ## My process
 
 ### Built with
 
-<em>Placeholder</em>
+- Semantic HTML5 markup
+- CSS custom properties and flexbox
 
 ### What I learned
 
-<em>Placeholder</em>
+Improve my HTML / CSS knowledges.
 
 ## Author
 

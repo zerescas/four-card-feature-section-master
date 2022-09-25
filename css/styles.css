@@ -1,0 +1,246 @@
+:root {
+
+  /* - Font size: 15px */
+
+  /*=====
+  Primary Colors
+  =====*/
+
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+
+  /*=====
+  Neutral Colors
+  =====*/
+
+  --transparent-darkish-blue: hsla(219, 63%, 47%, 0.15);
+  --very-dark-blue: hsl(234, 12%, 34%);
+  --grayish-blue: hsl(229, 6%, 66%);
+  --very-light-gray: hsl(0, 0%, 98%);
+  --white: hsl(0, 0%, 100%);
+
+}
+
+html {
+  background-color: var(--very-light-gray);
+  color: var(--very-dark-blue);
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+main {
+  align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  flex: 1 0 0;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+header {
+  text-align: center;
+}
+
+/* Helpers */
+
+.grid-row-1 {
+  grid-row: 1 / span 2;
+}
+
+.grid-column-1 {
+  grid-column: 1;
+}
+
+.grid-column-2 {
+  grid-column: 2;
+}
+
+.grid-column-3 {
+  grid-column: 3;
+}
+
+/* Introduce header */
+
+.introduce-header {
+  margin-bottom: 4rem;
+  width: 550px;
+}
+
+.introduce-header__header {
+  font-size: 2.25em;
+  font-weight: 200;
+  line-height: 1.4;
+  margin-bottom: 1.3rem;
+}
+
+.introduce-header__description {
+  color: var(--grayish-blue);
+  font-size: .95em;
+  font-weight: 300;
+  line-height: 1.65;
+}
+
+.introduce-header__header,
+.introduce-header__description {
+  transition: 0.15s;
+}
+
+/* Four card section */
+
+.four-card-container {
+  align-items: center;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  justify-content: center;
+}
+
+/* Card Decorators */
+
+/* Card top line decorator */
+
+.card::before {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  content: "";
+  display: block;
+  height: .25rem;
+}
+
+.card--red::before,
+.card--red::after {
+  background-color: var(--red);
+}
+
+.card--cyan::before,
+.card--cyan::after {
+  background-color: var(--cyan);
+}
+
+.card--orange::before,
+.card--orange::after {
+  background-color: var(--orange);
+}
+
+.card--blue::before,
+.card--blue::after {
+  background-color: var(--blue);
+}
+
+/* Card hover effect */
+
+.card:after {
+  content: "";
+  height: 0%;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  transition: .25s ease;
+  width: 100%;
+}
+
+.card:hover:after {
+  height: 100%;
+  opacity: 0.08;
+}
+
+/* Card  */
+
+.card {
+  background-color: var(--white);
+  border-radius: .4rem;
+  box-shadow: 0 .6rem 1.2rem var(--transparent-darkish-blue);
+  max-width: 350px;
+  overflow: hidden;
+  position: relative;
+}
+
+.card__content {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 2rem;
+}
+
+.card__header {
+  font-size: 1.25em;
+  font-weight: 600;
+  margin-bottom: .55rem;
+}
+
+.card__description {
+  color: var(--grayish-blue);
+  font-size: 0.82em;
+  font-weight: 300;
+  line-height: 1.8;
+  margin-bottom: 2.3rem;
+}
+
+.card__logo {
+  align-self: flex-end;
+  width: 4rem;
+}
+
+/* Attribution */
+
+.attribution {
+  color: var(--grayish-blue);
+  display: flex;
+  font-size: 0.8em;
+  margin-top: 2rem;
+  text-align: center;
+  gap: 1rem;
+}
+
+.attribution a {
+  color: var(--very-dark-blue);
+  font-weight: 600;
+}
+
+@media screen and (max-width:1250px) {
+
+  .four-card-container {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+}
+
+@media screen and (max-width:560px) {
+
+  .four-card-section {
+    padding: 2rem;
+  }
+
+  .introduce-header {
+    width: 100%;
+  }
+
+  .introduce-header__header {
+    font-size: 1.6em;
+  }
+
+  .introduce-header__description {
+    font-size: .9em;
+  }
+
+  .four-card-container {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+  }
+
+  .attribution {
+    flex-flow: column nowrap;
+    gap: 0;
+  }
+}
