@@ -23,7 +23,7 @@ Users should be able to:
 
 ### Screenshots
 
-![](images/screenshots/screenshot-desktop.jpeg)<br>
+![Desktop-2022 09 25-18 10 54 01](https://user-images.githubusercontent.com/77718874/192136706-c90d2179-1e54-40d2-940d-0ba1bae71c87.gif)<br>
 <strong>Desktop</strong>
 
 <br>
